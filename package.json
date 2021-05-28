@@ -1,0 +1,22 @@
+{
+  "name": "agora_blockchain",
+  "version": "1.0.0",
+  "description": "Test code for demonstrating agora blockchain workflow",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "truffle test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/ayush0x00/agora_blockchain.git"
+  },
+  "author": "Ayush Tiwari",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ayush0x00/agora_blockchain/issues"
+  },
+  "homepage": "https://github.com/ayush0x00/agora_blockchain#readme"
+}
