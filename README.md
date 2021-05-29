@@ -37,19 +37,24 @@ Below commands are inside truffle develop console -
 $ migrate
 
 **Creating new User**
-$ let main = await MainContract.deployed();
-$ await main.address
-$ let txReceipt = await main.createUser();
-$ await main.Users(1);
+```javascript
+let main = await MainContract.deployed();
+await main.address
+let txReceipt = await main.createUser();
+await main.Users(1);
+```
 
 **Creating new Election**
-$ let user = await User.at(await main.Users(1));
-$ user.address
-$ txReceipt = await user.createElection(["Test election", "This is a test election", "Oklahoma"], [1, 1000], ["Raj", "Ayush"]);
-$ await user.Elections(1);
-
+```javascript
+let user = await User.at(await main.Users(1));
+user.address
+txReceipt = await user.createElection(["Test election", "This is a test election", "Oklahoma"], [1, 1000], ["Raj", "Ayush"]);
+await user.Elections(1);
+```
 **Getting details of Election**
-$ let election = await Election.at(await user.Elections(1));
-$ election.address
-$ await election.name();
-$ await election.description();
+```javascript
+let election = await Election.at(await user.Elections(1));
+election.address
+await election.name();
+await election.description();
+```
