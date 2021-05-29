@@ -7,7 +7,17 @@
     "test": "test"
   },
   "scripts": {
-    "test": "truffle test"
+    "test": "truffle test",
+    "build": "truffle compile",
+    "migrate": "rm -rf build && truffle migrate --reset --compile-all --network development",
+    "ganache": "ganache-cli --networkId $npm_package_config_ganache_networkId --allowUnlimitedContractSize --gasLimit 10000000 --gasPrice $npm_package_config_ganache_gasPrice --mnemonic \"$MNEMONIC\""
+  },
+  "config": {
+    "ganache": {
+      "networkId": 3431,
+      "gasPrice": 25000000000,
+      "gasLimit": 6500000
+    }
   },
   "repository": {
     "type": "git",
@@ -18,5 +28,9 @@
   "bugs": {
     "url": "https://github.com/ayush0x00/agora_blockchain/issues"
   },
-  "homepage": "https://github.com/ayush0x00/agora_blockchain#readme"
+  "homepage": "https://github.com/ayush0x00/agora_blockchain#readme",
+  "devDependencies": {
+    "concurrently": "^6.2.0",
+    "ganache-cli": "^6.12.2"
+  }
 }

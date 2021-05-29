@@ -6,12 +6,11 @@ import './User.sol';
 contract MainContract {
     uint public userId = 0;
     mapping (uint => address) public Users;
-
-    function createUser () public returns(address) {
+    event userCreated(address user);
+    function createUser () public  {
         User user = new User(msg.sender);
         userId++;
         Users[userId] = address(user);
-        return Users[userId];
+        emit userCreated(Users[userId]);
     }
-
 }
